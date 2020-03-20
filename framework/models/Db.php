@@ -12,7 +12,7 @@ class Db {
      */
     static public function read(){
         if( !self::$read ) {
-            self::$read = new PDO('mysql:host=localhost;port=3306;dbname=vulntraining', 'vulntraining', '#x7QE1Jg&cNO', array(
+            self::$read = new PDO('mysql:host=localhost;port=3306;dbname=', '', '', array(
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             ));
@@ -25,7 +25,7 @@ class Db {
      */
     static public function write(){
         if( !self::$write ) {
-            self::$write = new PDO('mysql:host=localhost;port=3306;dbname=vulntraining', 'vulntraining', '#x7QE1Jg&cNO', array(
+            self::$write = new PDO('mysql:host=localhost;port=3306;dbname=', '', '', array(
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             ));
